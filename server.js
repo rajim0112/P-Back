@@ -3,9 +3,21 @@ const mysql = require('mysql');
 const cors = require('cors');
 
 const app = express();
-app.use(cors({
-    origin:"*"
-}));
+app.use(cors(
+    // {
+    // origin:"*"
+    // }
+));
+
+// app.use(
+//     cors({
+//         origin: ["http://localhost:3000", "https://p-front-delta.vercel.app"],
+//         methods: ["GET", "POST"],
+//         credentials: true,
+//     })
+// );
+
+app.options('*', cors());
 
 app.use(express.json());
 
