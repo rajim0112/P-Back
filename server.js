@@ -57,9 +57,10 @@ app.post('/login', (req,res) => {
     })
 })
 
-app.get('/', (req,res) => {
-    res.send("Server is running")
-})
+    app.get('/', (req,res) => {
+        res.send("Server is running")
+    })
+
 app.listen(8081, () => {
     console.log("Server has Started!...");
 })
